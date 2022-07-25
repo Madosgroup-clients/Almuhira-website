@@ -12,7 +12,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon_io/favicon-16x16.png">
     <link rel="manifest" href="./favicon_io/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="yHYWt7KaXBMyUf9VcorSjJb-3uadrwPWuxUOMNYZcAw" />
     <link rel="stylesheet" href="./styles/almuhira.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +45,7 @@
         <div class="main_home">
             <form id="newsLetter" onsubmit="handleSubmitnewsLetter(event)">
                 <input type="email" placeholder="subscribe to our newsletter" name='newsLetter'>
-                <button type ="submit" id="search">></button>
+                <button type="submit" id="search">></button>
             </form>
             <div class="main_container">
                 <div class="main_text_container">
@@ -295,14 +294,23 @@
             <input type="tel" placeholder="Entrer votre numéro de telephone*" name="Phonenumber" id="telephone">
             <textarea id="message" cols="30" rows="7" name="message"
                 placeholder="Entrer votre message ici !*"></textarea>
-            <input type="submit" value="Submit" id="button">
+
+            <button type="submit" id="submit">
+                Envoyer
+                <div class="loading"></div>
+            </button>
         </form>
 
     </section>
     <footer>
         <div class="muhira">
-            <p> <span id="color_beauty">Al'Muhira</span> all right reserved</p>
-            <p>&copy;2022</p>
+            <p> <span id="color_beauty">Al'Muhira</span> all right reserved &copy;</p>
+            <p id="dateNow">
+                <script>
+                    let myDate = new Date
+                    document.querySelector('#dateNow').innerText = myDate.getFullYear().toString();
+                </script>
+            </p>
         </div>
         <div class="muhira">
             <p>Powered by <a target="-blanck" href='https://madosgroup.com' style="color:#ff7800 ;">Mados Group</a></p>

@@ -1,7 +1,7 @@
 var amburger = document.querySelector(".amburger");
 var menu = document.querySelector(".menu");
 var reveals = document.querySelectorAll(".reveal");
-const body = document.querySelector("body");
+var body = document.querySelector("body");
 
 for (let index = 0; index < menu.getElementsByTagName("li").length; index++) {
     menu
@@ -42,8 +42,12 @@ window.addEventListener("scroll", () => {
     }
 });
 // var newsLetter = document.querySelector('#newsLetter')[0].value
-
 var form = document.querySelectorAll("#FormData");
+var isRequesting = false
+
+
+
+
 
 
 
@@ -54,7 +58,6 @@ var ErroMessage = {
 };
 form = (event) => {
     event.stopPropagation();
-
     var value = event.target.value;
     var name = event.target.name;
     return (Data = { ...Data, [name]: value });
@@ -67,24 +70,23 @@ handleSubmitnewsLetter = (event) => {
     console.log(newsLetter)
     if (!newsLetter) {
         body.innerHTML += `
-                <div class="message_notifier">
-                    <div class="notifier_header">
-                        <h5>${"Erreur !"}</h5>
-                        <span >X</span>
-                    </div>
-                <div class="message_main">
-                    <p>
-                        Vous ne pouvez pas envoyer un formulaire vide
-                    </p>
+            <div class="message_notifier error">
+                <div class="notifier_header">
+                    <h5 id="error"> Erreur !</h5>
+                    <span>X</span>
                 </div>
-            </div>`;
+                <p>
+                    Vous ne pouvez pas envoyer un formulaire vide
+                </p>
+            </div>`
+        ;
         let mymessage = document.body.querySelector(".message_notifier");
         mymessage.querySelector("span").addEventListener("click", () => {
             mymessage.remove();
         });
     } else {
 
-        fetch("http://192.168.1.104:9000/api/addmail", {
+        fetch("https://newsletterlaravel.herokuapp.com", {
             method: "post",
             body: JSON.stringify({
                 email: newsLetter,
@@ -93,55 +95,71 @@ handleSubmitnewsLetter = (event) => {
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
             },
-        })
-            .then((response) => {
-                console.log(response.status)
-                body.innerHTML += `
+        }).then((response) => {
+            console.log(response.status)
+            body.innerHTML += `
                 <div class="message_notifier success">
                     <div class="notifier_header">
-                        <h5>${"Registered!"}</h5>
-                        <span >X</span>
+                        <h5 id="success"> OK !</h5>
+                        <span>X</span>
                     </div>
-                <div class="message_main">
                     <p>
-                        Vous avez souscrit a notre newsLetter
+                        Vous Avez Souscrit avec success a notre infolettre !
                     </p>
-                </div>
-                 </div>`;
-                let mymessage = document.body.querySelector(".message_notifier");
-                mymessage.querySelector("span").addEventListener("click", () => {
-                    mymessage.remove();
-                });
-            })
-            .then((json) => console.log(json))
-            .catch((error) => {
-                console.log("an error occur ! checkout your network");
-                console.log(error);
+            </div>`;
+            let mymessage = document.body.querySelector(".message_notifier");
+            mymessage.querySelector("span").addEventListener("click", () => {
+                mymessage.remove();
             });
+        }).then((json) => console.log(json)).catch((error) => {
+
+            body.innerHTML += `
+                <div class="message_notifier error">
+                    <div class="notifier_header">
+                        <h5 id='error'>Une erreur est survenu</h5>
+                        <span>X</span>
+                    </div>
+                    <p>
+                        Vérifier votre connection internet puis réessayer l'opération !
+                    </p>
+                </div>`
+                ;
+
+            let mymessage = document.body.querySelector(".message_notifier");
+            mymessage.querySelector("span").addEventListener("click", () => {
+                mymessage.remove();
+            });
+            console.log("an error occur ! checkout your network");
+            console.log(error);
+        });
     }
 };
+
+
 
 handleSubmit = (event) => {
     event.preventDefault();
     if (Object.keys(Data).length === 0) {
         body.innerHTML += `
-                <div class="message_notifier">
-                    <div class="notifier_header">
-                        <h5>${"Erreur !"}</h5>
-                        <span >X</span>
-                    </div>
-                <div class="message_main">
-                    <p>
-                        Vous ne pouvez pas envoyer un formulaire vide
-                    </p>
+            <div class="message_notifier error">
+                <div class="notifier_header">
+                    <h5 id="error"> Erreur !</h5>
+                    <span>X</span>
                 </div>
-            </div>`;
+                <p>
+                    Vous ne pouvez pas envoyer un formulaire vide
+                </p>
+            </div>`
+        ;
 
         let mymessage = document.body.querySelector(".message_notifier");
         mymessage.querySelector("span").addEventListener("click", () => {
             mymessage.remove();
         });
+
     } else {
+        let loadingAnimation = document.querySelector('.loading')
+        loadingAnimation.style.display = 'flex';
         fetch("http://192.168.43.114:9000/api/mailer/sendmail/", {
             method: "post",
             body: JSON.stringify({
@@ -159,17 +177,42 @@ handleSubmit = (event) => {
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
             },
-        })
-            .then((response) => {
-                console.log(response);
+        }).then((response) => {
+            body.innerHTML += `
+                <div class="message_notifier success">
+                    <div class="notifier_header">
+                        <h5 id="success"> OK !</h5>
+                        <span>X</span>
+                    </div>
+                    <p>
+                        Votre Message a été envoyer avec succès !
+                    </p>
+                </div>`
+            ;
+            // console.log(response);
+            return response.json();
+        }).catch((error) => {
+            loadingAnimation.style.display = 'none';
+            body.innerHTML += `
+                <div class="message_notifier error">
+                    <div class="notifier_header">
+                        <h5 id='error'>Une erreur est survenu</h5>
+                        <span>X</span>
+                    </div>
+                    <p>
+                        Vérifier votre connection internet puis réessayer l'opération !
+                    </p>
+                </div>`
+                ;
 
-                return response.json();
-            })
-            .then((json) => console.log(json))
-            .catch((error) => {
-                console.log("an error occur ! checkout your network");
-                console.log(error);
+            let mymessage = document.body.querySelector(".message_notifier");
+            mymessage.querySelector("span").addEventListener("click", () => {
+                mymessage.remove();
             });
+            Data = {}
+            console.log(error);
+        }
+        );
     }
 };
 
