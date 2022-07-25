@@ -85,8 +85,7 @@ handleSubmitnewsLetter = (event) => {
             mymessage.remove();
         });
     } else {
-
-        fetch("https://newsletterlaravel.herokuapp.com", {
+        fetch("https://newsletterlaravel.herokuapp.com/api/addmail", {
             method: "post",
             body: JSON.stringify({
                 email: newsLetter,
@@ -160,7 +159,7 @@ handleSubmit = (event) => {
     } else {
         let loadingAnimation = document.querySelector('.loading')
         loadingAnimation.style.display = 'flex';
-        fetch("http://192.168.43.114:9000/api/mailer/sendmail/", {
+        fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
             method: "post",
             body: JSON.stringify({
                 subject: "Feed back",
@@ -178,6 +177,7 @@ handleSubmit = (event) => {
                 "Content-type": "application/json; charset=UTF-8",
             },
         }).then((response) => {
+            loadingAnimation.style.display = 'none';
             body.innerHTML += `
                 <div class="message_notifier success">
                     <div class="notifier_header">
@@ -188,8 +188,10 @@ handleSubmit = (event) => {
                         Votre Message a été envoyer avec succès !
                     </p>
                 </div>`
-            ;
-            // console.log(response);
+            ;let mymessage = document.body.querySelector(".message_notifier");
+            mymessage.querySelector("span").addEventListener("click", () => {
+                mymessage.remove();
+            });
             return response.json();
         }).catch((error) => {
             loadingAnimation.style.display = 'none';
@@ -209,7 +211,7 @@ handleSubmit = (event) => {
             mymessage.querySelector("span").addEventListener("click", () => {
                 mymessage.remove();
             });
-            Data = {}
+            // Data = {}
             console.log(error);
         }
         );
