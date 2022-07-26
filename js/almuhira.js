@@ -85,7 +85,7 @@ handleSubmitnewsLetter = (event) => {
             mymessage.remove();
         });
     } else {
-        fetch("https://newsletterlaravel.herokuapp.com/api/addmail", {
+        fetch("https://newsletterlaravel1.herokuapp.com/api/addmail", {
             method: "post",
             body: JSON.stringify({
                 email: newsLetter,
