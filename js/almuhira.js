@@ -41,7 +41,6 @@ window.addEventListener("scroll", () => {
         }
     }
 });
-// var newsLetter = document.querySelector('#newsLetter')[0].value
 var form = document.querySelectorAll("#FormData");
 var isRequesting = false
 
@@ -79,7 +78,7 @@ handleSubmitnewsLetter = (event) => {
                     Vous ne pouvez pas envoyer un formulaire vide
                 </p>
             </div>`
-        ;
+            ;
         let mymessage = document.body.querySelector(".message_notifier");
         mymessage.querySelector("span").addEventListener("click", () => {
             mymessage.remove();
@@ -149,7 +148,7 @@ handleSubmit = (event) => {
                     Vous ne pouvez pas envoyer un formulaire vide
                 </p>
             </div>`
-        ;
+            ;
 
         let mymessage = document.body.querySelector(".message_notifier");
         mymessage.querySelector("span").addEventListener("click", () => {
@@ -188,7 +187,7 @@ handleSubmit = (event) => {
                         Votre Message a été envoyer avec succès !
                     </p>
                 </div>`
-            ;let mymessage = document.body.querySelector(".message_notifier");
+                ; let mymessage = document.body.querySelector(".message_notifier");
             mymessage.querySelector("span").addEventListener("click", () => {
                 mymessage.remove();
             });
@@ -211,7 +210,6 @@ handleSubmit = (event) => {
             mymessage.querySelector("span").addEventListener("click", () => {
                 mymessage.remove();
             });
-            // Data = {}
             console.log(error);
         }
         );
