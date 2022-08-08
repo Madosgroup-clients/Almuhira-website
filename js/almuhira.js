@@ -88,27 +88,45 @@ handleSubmitnewsLetter = (event) => {
             method: "post",
             body: JSON.stringify({
                 email: newsLetter,
-                AppCode: 1123
+                AppCode: 42703
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
             },
         }).then((response) => {
             console.log(response.status)
-            body.innerHTML += `
-                <div class="message_notifier success">
+            if(response.status !== 200){
+                body.innerHTML += `
+                <div class="message_notifier error">
                     <div class="notifier_header">
-                        <h5 id="success"> OK !</h5>
+                        <h5 id='error'>Une erreur est survenu</h5>
                         <span>X</span>
                     </div>
                     <p>
-                        Vous Avez Souscrit avec success a notre infolettre !
+                        Vérifier votre connection internet puis réessayer l'opération !
                     </p>
-            </div>`;
-            let mymessage = document.body.querySelector(".message_notifier");
-            mymessage.querySelector("span").addEventListener("click", () => {
-                mymessage.remove();
-            });
+                </div>`
+                ;
+                let mymessage = document.body.querySelector(".message_notifier");
+                mymessage.querySelector("span").addEventListener("click", () => {
+                    mymessage.remove();
+                });
+            }else{
+                body.innerHTML += `
+                    <div class="message_notifier success">
+                        <div class="notifier_header">
+                            <h5 id="success"> OK !</h5>
+                            <span>X</span>
+                        </div>
+                        <p>
+                            Vous Avez Souscrit avec success a notre infolettre !
+                        </p>
+                </div>`;
+                let mymessage = document.body.querySelector(".message_notifier");
+                mymessage.querySelector("span").addEventListener("click", () => {
+                    mymessage.remove();
+                });
+            }
         }).then((json) => console.log(json)).catch((error) => {
 
             body.innerHTML += `

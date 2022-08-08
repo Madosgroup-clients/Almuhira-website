@@ -45,9 +45,9 @@
             </span>
         </nav>
         <div class="main_home">
-            <form action="post">
-                <input type="newsletter" placeholder="subscribe to our newsletter">
-                <span id="search">></span>
+            <form id="newsLetter" onsubmit="handleSubmitnewsLetter(event)">
+                <input type="email" placeholder="subscribe to our newsletter" name='newsLetter'>
+                <button type="submit" id="search">></button>
             </form>
             <div class="main_container">
                 <div class="main_text_container">
