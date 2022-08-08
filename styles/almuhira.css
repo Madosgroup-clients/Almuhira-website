@@ -1071,6 +1071,7 @@ footer {
 
   .contact_text {
     width: 100%;
+    text-align: justify;
   }
   .contact_text > h1 {
     font-size: 1.4rem;

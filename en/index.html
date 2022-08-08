@@ -97,11 +97,11 @@
                 <div class="statistic_displayer">
                     <div class="statistic_container">
                         <div class="single_statistic_displayer">
-                            <h2>+100</h2>
+                            <h2>+180</h2>
                             <p>Recruited</p>
                         </div>
                         <div class="single_statistic_displayer">
-                            <h2>+180</h2>
+                            <h2>+100</h2>
                             <p>Trained</p>
                         </div>
                         <div class="single_statistic_displayer">
@@ -109,8 +109,8 @@
                             <p>Placed</p>
                         </div>
                         <div class="single_statistic_displayer">
-                            <h2>+50</h2>
-                            <p>Partner</p>
+                            <h2>5</h2>
+                            <p>Countries</p>
                         </div>
                     </div>
                 </div>
@@ -120,9 +120,8 @@
         <div class="txt_container">
             <h1 id="big_title">Where job are <span id="color_beauty">available?</span></h1>
             <P>
-                We offer you the places where there is a great demand for labour... all over the world. here are the
-                countries where you can work: Dubai, Saudi Arabia, Qatar, Canada.
-            </P>
+                Our employer network is made up of employers based in countries where the demand for labor is high.
+                Among others Dubai, Canada, Saudi Arabia and Qatar.            </P>
         </div>
         </div>
         <div class="cube_container">
@@ -308,43 +307,71 @@
             </div>
         </div>
     </section>
-    <section id="Contact-us" class="contact_us_container">
-        <div class="contact_text">
-            <h1 class="titles">Contact us</h1>
-            <p>
-                Do you have any questions for us regarding our various HR services? Whether you are a
-                candidate looking for a job or an employer looking for new talent, do not hesitate to contact us
-                join.
-            </p>
-            <div class="contact_card">
-                <div class="card_content">
-                    <i class="fas fa-phone-alt"></i>
-                    <ul>
-                        <li>+257 62 34 35 77</li>
-                        <li>+257 79 49 00 99</li>
-                    </ul>
-                </div>
-                <div class="card_content">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Boulevard Melchior Ndadaye no 77
-                        House : peace corner
-                    </p>
-                </div>
+
+    <section id="Contact-us" class="contact_us_container_main">
+        <div class="ceo_container">
+            <img src="../imgs/pdg.jpg" alt="pdg_almuhira" title="Almuhira_pdg">
+            <div class="name_container">
+                <h5>Nshimirimana Muhammad</h5>
+                <p>C.E.O</p>
+                <span class="contact">
+                    <span class="cnt">
+                        <i class="fas fa-envelope"></i>
+                        <p>muhammad@al-muhira.com</p>
+                    </span>
+                    <span class="cnt">
+                        <i class="fab fa-whatsapp"></i>
+                        <p>+257 79 49 00 99</p>
+                    </span>
+                </span>
             </div>
         </div>
 
-        <form id="FormData" class="contact_form" oninput="form(event)" onsubmit="handleSubmit(event)">
-            <input type="text" placeholder="Entrer votre nom*" id="Name" name="Name">
-            <input type="text" placeholder="Entrer le nom de votre Entreprise*" name="EtsName" id="Entreprise">
-            <input type="email" placeholder="Entre votre E-mail*" id="E-mail" name="email">
-            <input type="tel" placeholder="Entrer votre numéro de telephone*" name="Phonenumber" id="telephone">
-            <textarea id="message" cols="30" rows="7" name="message"
-                placeholder="Entrer votre message ici !*"></textarea>
-            <button type="submit" id="submit">
-                Send
-                <div class="loading"></div>
-            </button>
-        </form>
+        <div class="contact_us_container">
+            <div class="contact_text">
+                <h1 class="titles">Contact us</h1>
+                <p>
+                    Do you have any questions for us regarding our various HR services? Whether you are a
+                    candidate looking for a job or an employer looking for new talent, do not hesitate to contact us
+                    join.
+                </p>
+                <div class="contact_card">
+
+                    <div class="card_content">
+                        <i class="fas fa-phone-alt"></i>
+                        <ul>
+                            <li>+257 62 34 35 77</li>
+                            <!-- <li>+257 79 49 00 99</li> -->
+                        </ul>
+                    </div>
+                    <div class="card_content">
+                        <i class="fas fa-envelope"></i>
+                        <ul>
+                            <li>info@al-muhira.com</li>
+                        </ul>
+                    </div>
+                    <div class="card_content">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Boulevard Melchior Ndadaye no 77
+                            House : peace corner
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <form id="FormData" class="contact_form" oninput="form(event)" onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Enter your name*" id="Name" name="Name" required>
+                <input type="text" placeholder="The name of your Company*" name="EtsName" id="Entreprise" required>
+                <input type="email" placeholder="Provide your email*" id="E-mail" name="email" required>
+                <input type="tel" placeholder="Provide your phone number*" name="Phonenumber" id="telephone" required>
+                <textarea id="message" cols="30" rows="7" name="message"
+                    placeholder="Enter your message here  !*"></textarea>
+                <button type="submit" id="submit">
+                    Send
+                    <div class="loading"></div>
+                </button>
+            </form>
+        </div>
 
     </section>
     <footer>
