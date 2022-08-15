@@ -89,7 +89,7 @@ handleSubmitnewsLetter = (event) => {
             method: "post",
             body: JSON.stringify({
                 email: newsLetter,
-                AppCode: 42703
+                AppCode: 1123
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
