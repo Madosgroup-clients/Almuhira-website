@@ -66,7 +66,7 @@ handleSubmitnewsLetter = (event) => {
     event.stopPropagation();
     event.preventDefault();
     var newsLetter = document.querySelector("#newsLetter")[0].value;
-    console.log(newsLetter)
+    // console.log(newsLetter)
     if (!newsLetter) {
         body.innerHTML += `
             <div class="message_notifier error">
