@@ -188,7 +188,7 @@ handleSubmit = (event) => {
                     email: Data.email,
                     message: Data.message,
                 },
-                email: "jamesamuli1998@gmail.com",
+                email: ["muhammad@al-muhira.com", "infoalmuhira@al-muhira.com"],
                 template: "almuhira",
             }),
             headers: {
