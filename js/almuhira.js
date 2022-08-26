@@ -85,11 +85,11 @@ handleSubmitnewsLetter = (event) => {
         });
     } else {
         // trying the request
-        fetch("https://newsletterlaravel1.herokuapp.com/api/addmail", {
+        fetch("http://newsletterlaravel1.herokuapp.com/api/addmail", {
             method: "post",
             body: JSON.stringify({
                 email: newsLetter,
-                AppCode: 1123
+                Appcode: 1123
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8",
