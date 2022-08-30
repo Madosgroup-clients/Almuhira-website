@@ -95,7 +95,7 @@ handleSubmitnewsLetter = (event) => {
                 "Content-type": "application/json; charset=UTF-8",
             },
         }).then((response) => {
-            console.log(response.status)
+            // console.log(response.status)
             if(response.status !== 200){
                 body.innerHTML += `
                 <div class="message_notifier error">
@@ -128,7 +128,7 @@ handleSubmitnewsLetter = (event) => {
                     mymessage.remove();
                 });
             }
-        }).then((json) => console.log(json)).catch((error) => {
+        }).catch((error) => {
 
             body.innerHTML += `
                 <div class="message_notifier error">
@@ -146,8 +146,8 @@ handleSubmitnewsLetter = (event) => {
             mymessage.querySelector("span").addEventListener("click", () => {
                 mymessage.remove();
             });
-            console.log("an error occur ! checkout your network");
-            console.log(error);
+            // console.log("an error occur ! checkout your network");
+            // console.log(error);
         });
     }
 };
