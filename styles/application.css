@@ -1,3 +1,13 @@
+*::-webkit-scrollbar{
+    width: 4px;
+}*::-webkit-scrollbar-track{
+    background-color: var(--backGroundColor);
+}*::-webkit-scrollbar-thumb{
+    background-color: var(--subtitleCOlor);
+    border-radius: .3rem;
+    border: none;
+}
+
 .Container {
   display: flex;
   flex-direction: column;
@@ -6,10 +16,9 @@
   padding: 1rem 4rem;
   gap: 1rem;
 }
+
 .Container > header {
-  /* padding: 1rem 4rem; */
   display: flex;
-  /* flex-direction: row; */
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -18,9 +27,9 @@
 .Container > header > h1 {
   color: var(--primaryColor);
 }
-label{
-    cursor: pointer;
-    /* font-size: .8rem; */
+label {
+  cursor: pointer;
+  /* font-size: .8rem; */
 }
 
 main {
@@ -29,13 +38,11 @@ main {
   width: 100%;
   height: 100%;
   gap: 1rem;
-  /* background-color: aqua; */
 }
 main .notice {
   display: flex;
   gap: 1rem;
   width: 100%;
-  /* background-color: blueviolet; */
 }
 .notice > fieldset {
   display: flex;
@@ -44,7 +51,6 @@ main .notice {
   border: none;
   width: 100%;
   gap: 0.5rem;
-  /* background-color: aqua; */
 }
 .notice > fieldset .single_input {
   width: 100%;
@@ -55,10 +61,11 @@ main .notice {
 .notice > fieldset .single_input label {
   font-weight: 600;
   width: 15rem;
-  /* background-color: aqua; */
-  /* word-wrap: unset; */
 }
-input[type="text"],input[type="tel"], input[type="email"],input[type="number"]{
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"] {
   width: 100%;
   height: 1.7rem;
   padding-inline: 0.5rem;
@@ -66,15 +73,19 @@ input[type="text"],input[type="tel"], input[type="email"],input[type="number"]{
   outline: solid 0.1rem var(--subtitleCOlor);
   border: none;
   border-radius: 0.3rem;
-  /* outline: none; */
-  transition: all .2s ease;
+  transition: all 0.2s ease;
 }
-input[type="text"]:focus, input[type="tel"]:focus, input[type="number"]:focus,input[type="email"]:focus {
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
   outline: solid 2px var(--primaryColor);
   border: none;
 }
-input[type="text"],input[type="tel"], input[type="email"],input[type="number"]::placeholder {
-  /* padding-inline: .5rem ; */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="number"]::placeholder {
   font-size: 0.7rem;
 }
 .notice p {
@@ -88,30 +99,25 @@ input[type="text"],input[type="tel"], input[type="email"],input[type="number"]::
   flex-direction: column;
   position: relative;
   gap: 0.8rem;
-  /* background-color: aqua; */
 }
 .fieldset_section {
   width: 100%;
-  height: 100%;
+  height: 28rem;
   padding: 0.8rem;
   border-radius: 0.3rem;
   border: solid 1px var(--subtitleCOlor);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
-  /* background-color: aqua; */
+  overflow: auto;
 }
 #applicationForm fieldset {
   border: none;
   width: 100%;
-  /* height: 100%; */
-  /* background-color: aqua; */
 }
 #applicationForm fieldset legend {
   font-weight: 600;
   font-size: 1.2rem;
-  /* margin-bottom: .3rem; */
 }
 #applicationForm fieldset > p {
   font-size: 0.7rem;
@@ -134,52 +140,57 @@ input[type="text"],input[type="tel"], input[type="email"],input[type="number"]::
   padding-block: 0.5rem;
   padding-inline: 0.9rem;
   display: flex;
-  /* align-items: center; */
   gap: 1rem;
 }
 #applicationForm .checkbox {
   flex-direction: column;
-  gap: .2rem;
-}.centered{
-    align-items: center;
-    /* padding: 0rem 0rem; */
-    width: 100%;
-}.wrapper{
-    width: 100%;
-    display: flex;
-    gap: .8rem;
-}.wrapper .input_container{
-    display: flex;
-    flex-direction: row !important;
+  gap: 0.2rem;
+}
+.centered {
+  align-items: center;
+}
+.wrapper {
+  width: 100%;
+  display: flex;
+  gap: 0.8rem;
+}
+.wrapper .input_container {
+  display: flex;
+  flex-direction: row !important;
 }
 #applicationForm .input_wrapper .input_container {
   width: 100%;
   display: flex;
   flex-direction: column;
-}#applicationForm .input_wrapper .input_container .single_input{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    
-}.input_container .single_input label{
-    width: 100%;
-}.dontExpand{
-    width: unset !important;
-}.dontExpand label{
-    width: unset !important;
-} .input_container .single_input input{
-    width: 100%;
-    margin: .2rem 0;
+}
+#applicationForm .input_wrapper .input_container .single_input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.input_container .single_input label {
+  width: 100%;
+}
+.dontExpand {
+  width: unset !important;
+}
+.dontExpand label {
+  width: unset !important;
+}
+.input_container .single_input input {
+  width: 100%;
+  margin: 0.2rem 0;
 }
 #applicationForm .input_wrapper > .single_input {
   display: flex;
   align-items: center;
   gap: 0.2rem;
   cursor: pointer;
-}.single_input p{
-    font-size: .8rem;
-    width: 100%;
+}
+.single_input p {
+  font-size: 0.8rem;
+  width: 100%;
 }
 #applicationForm .input_wrapper label {
   font-size: 0.8rem;
