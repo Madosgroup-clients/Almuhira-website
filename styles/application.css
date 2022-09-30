@@ -142,6 +142,15 @@ input[type="text"],input[type="tel"], input[type="email"],input[type="number"]::
   gap: .2rem;
 }.centered{
     align-items: center;
+    /* padding: 0rem 0rem; */
+    width: 100%;
+}.wrapper{
+    width: 100%;
+    display: flex;
+    gap: .8rem;
+}.wrapper .input_container{
+    display: flex;
+    flex-direction: row !important;
 }
 #applicationForm .input_wrapper .input_container {
   width: 100%;
