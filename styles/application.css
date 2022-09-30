@@ -1,0 +1,219 @@
+.Container {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  height: inherit;
+  padding: 1rem 4rem;
+  gap: 1rem;
+}
+.Container > header {
+  /* padding: 1rem 4rem; */
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.Container > header > h1 {
+  color: var(--primaryColor);
+}
+label{
+    cursor: pointer;
+    /* font-size: .8rem; */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 1rem;
+  /* background-color: aqua; */
+}
+main .notice {
+  display: flex;
+  gap: 1rem;
+  width: 100%;
+  /* background-color: blueviolet; */
+}
+.notice > fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: none;
+  width: 100%;
+  gap: 0.5rem;
+  /* background-color: aqua; */
+}
+.notice > fieldset .single_input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notice > fieldset .single_input label {
+  font-weight: 600;
+  width: 15rem;
+  /* background-color: aqua; */
+  /* word-wrap: unset; */
+}
+input[type="text"],input[type="tel"], input[type="email"],input[type="number"]{
+  width: 100%;
+  height: 1.7rem;
+  padding-inline: 0.5rem;
+  font-size: 0.7rem;
+  outline: solid 0.1rem var(--subtitleCOlor);
+  border: none;
+  border-radius: 0.3rem;
+  /* outline: none; */
+  transition: all .2s ease;
+}
+input[type="text"]:focus, input[type="tel"]:focus, input[type="number"]:focus,input[type="email"]:focus {
+  outline: solid 2px var(--primaryColor);
+  border: none;
+}
+input[type="text"],input[type="tel"], input[type="email"],input[type="number"]::placeholder {
+  /* padding-inline: .5rem ; */
+  font-size: 0.7rem;
+}
+.notice p {
+  width: 80rem;
+  font-size: 0.9rem;
+}
+#applicationForm {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 0.8rem;
+  /* background-color: aqua; */
+}
+.fieldset_section {
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem;
+  border-radius: 0.3rem;
+  border: solid 1px var(--subtitleCOlor);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* background-color: aqua; */
+}
+#applicationForm fieldset {
+  border: none;
+  width: 100%;
+  /* height: 100%; */
+  /* background-color: aqua; */
+}
+#applicationForm fieldset legend {
+  font-weight: 600;
+  font-size: 1.2rem;
+  /* margin-bottom: .3rem; */
+}
+#applicationForm fieldset > p {
+  font-size: 0.7rem;
+  color: var(--primaryColor);
+}
+#stepsleft {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  margin: auto;
+  background-color: var(--secondColor);
+  padding: 0.2rem 0.6rem;
+  display: flex;
+  align-items: center;
+  border-radius: 0.3rem;
+  font-size: 0.9rem;
+}
+
+#applicationForm .input_wrapper {
+  padding-block: 0.5rem;
+  padding-inline: 0.9rem;
+  display: flex;
+  /* align-items: center; */
+  gap: 1rem;
+}
+#applicationForm .checkbox {
+  flex-direction: column;
+  gap: .2rem;
+}.centered{
+    align-items: center;
+}
+#applicationForm .input_wrapper .input_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}#applicationForm .input_wrapper .input_container .single_input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    
+}.input_container .single_input label{
+    width: 100%;
+}.dontExpand{
+    width: unset !important;
+}.dontExpand label{
+    width: unset !important;
+} .input_container .single_input input{
+    width: 100%;
+    margin: .2rem 0;
+}
+#applicationForm .input_wrapper > .single_input {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+}.single_input p{
+    font-size: .8rem;
+    width: 100%;
+}
+#applicationForm .input_wrapper label {
+  font-size: 0.8rem;
+}
+#applicationForm .input_wrapper input[type="radio"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  appearance: none;
+  border: solid 1px var(--subtitleCOlor);
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  color: var(--bgColor);
+  cursor: pointer;
+}
+#applicationForm .input_wrapper input[type="radio"]::before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background-color: var(--primaryColor);
+  transform: scale(0);
+  transition: 150ms transform ease-in-out;
+}
+#applicationForm .input_wrapper input[type="radio"]:checked::before {
+  transform: scale(1, 1);
+}
+
+.steps {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+.steps button {
+  width: 100%;
+  outline: none;
+  border: none;
+  padding-block: 0.4rem;
+  background-color: var(--primaryColor);
+  color: var(--backGroundColor);
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
