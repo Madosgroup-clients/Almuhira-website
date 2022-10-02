@@ -49,7 +49,7 @@
                         <input type="text" name="Job requisition" placeholder="Job requisitions" required>
                     </div>
                 </fieldset>
-                
+
                 <p>
                     Applications without a requisition number will
                     not be considered . Complete one (1) application form for
@@ -67,96 +67,30 @@
                 </p>
                 <div class="fieldset_section">
                     <fieldset form="applicationForm">
-                        <legend>Section A : Eligibility to work in Canada</legend>
-                        <p>Please indicate your eligibility to work in Canada</p>
-                        <div class="input_wrapper checkbox">
-                            <div class="single_input">
-                                <input type="radio" name="eligibility options" id="pe">
-                                <label for="pe">Permanent eligibility(i.e. Canadian Citizen, Permanent Resident)</label>
-                            </div>
-                            <div class="single_input">
-                                <input type="radio" class="radio" name="eligibility options" id="crwp">
-                                <label for="crwp">Current valid work permit</label>
-                            </div>
-                            <div class="single_input">
-                                <input type="radio" name="eligibility options" id="eawp">
-                                <label for="eawp">Eligible to apply for a work permit</label>
-                            </div>
-                            <div class="single_input">
-                                <input type="radio" name="eligibility options" id="nec">
-                                <label for="nec">Not eligible to work in Canada</label>
-                            </div>
-                        </div>
-                    </fieldset>
-                    <fieldset form="applicationForm">
-                        <legend>Section B: Personal Data</legend>
-                        <p>Please provide your identity and current location information</p>
-                        <div class="input_wrapper">
-                            <div class="input_container">
-                                <div class="single_input">
-                                    <label for="lastname">Last Name</label>
-                                    <input type="text" name="Lastname" id="lastname" placeholder="lastname" required>
-                                </div>
-                                <div class="single_input">
-                                    <label for="firstname">First Name</label>
-                                    <input type="text" name="Firstname" id="firstname" placeholder="firstname" required>
-                                </div>
-                                <div class="single_input">
-                                    <label for="initial">Initial</label>
-                                    <input type="text" name="Initial" id="initial" placeholder="initial" required>
-                                </div>
-                            </div>
-                            <div class="input_container">
-                                <div class="single_input">
-                                    <label for="homephone">Home Phone *</label>
-                                    <input type="tel" name="homephone" id="homephone" placeholder="home phone" required>
-                                </div>
-                                <div class="single_input">
-                                    <label for="alternatephone">Alternate Phone</label>
-                                    <input type="tel" name="alternatephone" id="alternatephone"
-                                        placeholder="alternate phone">
-                                </div>
-                                <div class="single_input">
-                                    <label for="address">Address</label>
-                                    <input type="text" name="address" id="address" placeholder="address" required>
-                                </div>
-                            </div>
-                            <div class="input_container">
-                                <div class="single_input">
-                                    <label for="city">City*</label>
-                                    <input type="text" name="city" id="city" placeholder="city" required>
-                                </div>
-                                <div class="single_input">
-                                    <label for="province">Province</label>
-                                    <input type="text" name="province" id="province" placeholder="province">
-                                </div>
-                                <div class="single_input">
-                                    <label for="postalcode">Postal code</label>
-                                    <input type="number" name="address" id="postalcode" placeholder="postal code"
-                                        required>
-                                </div>
-                            </div>
-                        </div>
+                        <legend>Section C: Education and Training</legend>
+                        <p>Please provide your educational background informations</p>
                         <div class="input_wrapper centered">
                             <div class="input_container ">
                                 <div class="single_input ">
                                     <div class="wrapper centered">
                                         <div class="input_container">
-                                            <p>Were you previously employed within the City?</p>
+                                            <p>High School or GED</p>
                                             <div class="single_input dontExpand">
-                                                <label for="yesq1"><b>Yes</b></label>
-                                                <input type="radio" name="decision" id="yesq1">
-                                                <label for="noq1"><b>No</b></label>
-                                                <input type="radio" name="decision" id="noq1">
+                                                <label for="High school or GED"><b>Yes</b></label>
+                                                <input type="radio" name="High school or GED" id="High school or GED">
+                                                <label for="High school or GED no"><b>No</b></label>
+                                                <input type="radio" name="High school or GED" id="High school or GED no">
                                             </div>
                                         </div>
                                         <div class="input_container">
                                             <div class="single_input">
                                                 <!-- <label for="payroll">what was/is your payroll number?</label> -->
-                                                <input type="number" name="payroll" id="payroll"
-                                                    placeholder="payroll number">
-                                                <input type="text" name="department" id="department"
-                                                    placeholder="department" required>
+                                                <input type="text" name="nameOftheProgram" id="nameOftheProgram"
+                                                    placeholder="name of the program">
+                                                <input type="text" name="NameofLocation" id="Name of Location"
+                                                    placeholder="Name of Location">
+                                                <input type="date" name="YearofCompletion" id="YearofCompletion"
+                                                    placeholder="Year of Completion">
                                             </div>
                                         </div>
                                     </div>
@@ -164,28 +98,185 @@
                                 <div class="single_input">
                                     <div class="wrapper centered">
                                         <div class="input_container">
-                                            <p>Are you currently employed with the City?</p>
+                                            <p>Professional/Technical Certificate</p>
                                             <div class="single_input dontExpand">
-                                                <label for="yesq2"><b>Yes</b></label>
-                                                <input type="radio" name="decision2" id="yesq2">
-                                                <label for="noq2"><b>No</b></label>
-                                                <input type="radio" name="decision2" id="noq2">
+                                                <label for="Professional/Technical Certificate"><b>Yes</b></label>
+                                                <input type="radio" name="Professional/Technical Certificate"
+                                                    id="Professional/Technical Certificate">
+                                                <label for="Professional/Technical Certificate no"><b>No</b></label>
+                                                <input type="radio" name="Professional/Technical Certificate"
+                                                    id="Professional/Technical Certificate no">
                                             </div>
                                         </div>
 
                                         <div class="input_container">
                                             <div class="single_input">
                                                 <!-- <label for="department">Which department did/are you working in?</label> -->
-                                                <input type="number" name="payroll" id="payroll"
-                                                    placeholder="payroll number">
-                                                <input type="text" name="department" id="department"
-                                                    placeholder="department" required>
+                                                <input type="text" name="nameOftheProgram" id="nameOftheProgram"
+                                                    placeholder="name of the program">
+                                                <input type="text" name="NameofLocation" id="Name of Location"
+                                                    placeholder="Name of Location">
+                                                <input type="date" name="YearofCompletion" id="YearofCompletion"
+                                                    placeholder="Year of Completion">
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
+                                <div class="single_input">
+                                    <div class="wrapper centered">
+                                        <div class="input_container">
+                                            <p>College diploma</p>
+                                            <div class="single_input dontExpand">
+                                                <label for="College diploma"><b>Yes</b></label>
+                                                <input type="radio" name="College diploma" id="College diploma">
+                                                <label for="College diploma no"><b>No</b></label>
+                                                <input type="radio" name="College diploma" id="College diploma no">
+                                            </div>
+                                        </div>
+
+                                        <div class="input_container">
+                                            <div class="single_input">
+                                                <!-- <label for="department">Which department did/are you working in?</label> -->
+                                                <input type="text" name="nameOftheProgram" id="nameOftheProgram"
+                                                    placeholder="name of the program">
+                                                <input type="text" name="NameofLocation" id="Name of Location"
+                                                    placeholder="Name of Location">
+                                                <input type="date" name="YearofCompletion" id="YearofCompletion"
+                                                    placeholder="Year of Completion">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single_input">
+                                    <div class="wrapper centered">
+                                        <div class="input_container">
+                                            <p>Bachelor's degree</p>
+                                            <div class="single_input dontExpand">
+                                                <label for="Bachelor's degree"><b>Yes</b></label>
+                                                <input type="radio" name="Bachelor's degree" id="Bachelor's degree">
+                                                <label for="Bachelor's degree no"><b>No</b></label>
+                                                <input type="radio" name="Bachelor's degree" id="Bachelor's degree no">
+                                            </div>
+                                        </div>
+
+                                        <div class="input_container">
+                                            <div class="single_input">
+                                                <!-- <label for="department">Which department did/are you working in?</label> -->
+                                                <input type="text" name="nameOftheProgram" id="nameOftheProgram"
+                                                    placeholder="name of the program">
+                                                <input type="text" name="NameofLocation" id="Name of Location"
+                                                    placeholder="Name of Location">
+                                                <input type="date" name="YearofCompletion" id="YearofCompletion"
+                                                    placeholder="Year of Completion">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single_input">
+                                    <div class="wrapper centered">
+                                        <div class="input_container">
+                                            <p>Post secondary certificate</p>
+                                            <div class="single_input dontExpand">
+                                                <label for="Post secondary certificate"><b>Yes</b></label>
+                                                <input type="radio" name="Post secondary certificate"
+                                                    id="Post secondary certificate">
+                                                <label for="post secondary certificate no"><b>No</b></label>
+                                                <input type="radio" name="Post secondary certificate"
+                                                    id="post secondary certificate no">
+                                            </div>
+                                        </div>
+
+                                        <div class="input_container">
+                                            <div class="single_input">
+                                                <!-- <label for="department">Which department did/are you working in?</label> -->
+                                                <input type="text" name="nameOftheProgram" id="nameOftheProgram"
+                                                    placeholder="name of the program">
+                                                <input type="text" name="NameofLocation" id="Name of Location"
+                                                    placeholder="Name of Location">
+                                                <input type="date" name="YearofCompletion" id="YearofCompletion"
+                                                    placeholder="Year of Completion">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single_input">
+                                    <div class="wrapper centered">
+                                        <div class="input_container">
+                                            <p>Journeyman Trades Certificate</p>
+                                            <div class="single_input dontExpand">
+                                                <label for="journeyman trades certificate"><b>Yes</b></label>
+                                                <input type="radio" name="journeyman trades certificate"
+                                                    id="journeyman trades certificate">
+                                                <label for="journeyman trades certificate no"><b>No</b></label>
+                                                <input type="radio" name="journeyman trades certificate"
+                                                    id="journeyman trades certificate no">
+                                            </div>
+                                        </div>
+
+                                        <div class="input_container">
+                                            <div class="single_input">
+                                                <!-- <label for="department">Which department did/are you working in?</label> -->
+                                                <input type="text" name="nameOftheProgram" id="nameOftheProgram"
+                                                    placeholder="name of the program">
+                                                <input type="text" name="NameofLocation" id="Name of Location"
+                                                    placeholder="Name of Location">
+                                                <input type="date" name="YearofCompletion" id="YearofCompletion"
+                                                    placeholder="Year of Completion">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="single_input">
+                                    <div class="wrapper centered">
+                                        <div class="input_container">
+                                            <p>Other (please specify)</p>
+                                            <div class="single_input dontExpand">
+                                                <label for="others"><b>Yes</b></label>
+                                                <input type="radio" name="others" id="others">
+                                                <label for="othersNo"><b>No</b></label>
+                                                <input type="radio" name="others" id="othersNo">
+                                            </div>
+                                        </div>
+
+                                        <div class="input_container">
+                                            <div class="single_input">
+                                                <!-- <label for="department">Which department did/are you working in?</label> -->
+                                                <input type="text" name="nameOftheProgram" id="nameOftheProgram"
+                                                    placeholder="name of the program">
+                                                <input type="text" name="NameofLocation" id="Name of Location"
+                                                    placeholder="Name of Location">
+                                                <input type="date" name="YearofCompletion" id="YearofCompletion"
+                                                    placeholder="Year of Completion">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br>
+                                <div class="single_input">
+                                    <p>If your education is from outside Canada, has it been assessed for equivalency ?
+                                    </p>
+                                    <div class="single_input dontExpand">
+                                        <label for="equivalency"><b>Yes</b></label>
+                                        <input type="radio" name="equivalency" id="equivalency">
+                                        <label for="equivalencyNo"><b>No</b></label>
+                                        <input type="radio" name="equivalency" id="equivalencyNo">
+                                    </div>
+                                </div>
+                                <div class="single_input">
+                                    <p>Please list any professional designation</p>
+                                    <div class="single_input dontExpand">
+                                        <textarea name="designation" id="designation" cols="50" rows="2" placeholder="List any professional designation here"></textarea>
+                                    </div>
+                                </div>
                             </div>
+
+
                             <!-- <div class="input_container">
                                 <div class="single_input">
                                     <label for="payroll">what was/is your payroll number?</label>
