@@ -72,8 +72,10 @@ textarea {
   border-radius: 0.3rem;
   transition: all 0.2s ease;
   resize: none;
+  /* width: 100% !important; */
 }
 input[type="text"],
+select,
 input[type="tel"],
 input[type="email"],
 input[type="number"],
@@ -92,6 +94,7 @@ input[type="tel"]:focus,
 input[type="number"]:focus,
 input[type="email"]:focus,
 textarea:focus,
+select:focus,
 input[type="date"]:focus {
   outline: solid 2px var(--primaryColor);
   border: none;
@@ -101,6 +104,7 @@ input[type="tel"],
 input[type="email"],
 input[type="number"],
 textarea,
+select,
 input[type="date"]::placeholder {
   font-size: 0.7rem;
 }
@@ -118,7 +122,8 @@ input[type="date"]::placeholder {
 }
 .fieldset_section {
   width: 100%;
-  height: 28rem;
+  /* height: 28rem; */
+  height: 100%;
   padding: 0.8rem;
   border-radius: 0.3rem;
   border: solid 1px var(--subtitleCOlor);
@@ -188,6 +193,9 @@ input[type="date"]::placeholder {
 }
 .input_container .single_input label {
   width: 100%;
+}.column_direction{
+    flex-direction: column;
+    gap: unset;
 }
 .dontExpand {
   width: unset !important;
