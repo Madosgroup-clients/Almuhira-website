@@ -177,7 +177,7 @@ handleSubmit = (event) => {
     } else {
         let loadingAnimation = document.querySelector('.loading')
         loadingAnimation.style.display = 'flex';
-        fetch("https://mados-mailer.herokuapp.com/api/mailer/sendmail/", {
+        fetch("https://3.86.198.48:8000/api/mailer/sendmail/", {
             method: "post",
             body: JSON.stringify({
                 subject: "Feed back",

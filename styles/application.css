@@ -122,8 +122,8 @@ input[type="date"]::placeholder {
 }
 .fieldset_section {
   width: 100%;
-  /* height: 28rem; */
-  height: 100%;
+  height: 28rem;
+  /* height: 100%; */
   padding: 0.8rem;
   border-radius: 0.3rem;
   border: solid 1px var(--subtitleCOlor);
@@ -264,4 +264,21 @@ input[type="date"]::placeholder {
 }
 .steps .hidden {
   display: none;
+}
+
+#addTraining{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#addTraining span{
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  /* color: var(--secondColor); */
+  border: .1rem solid var(--primaryColor);
 }
