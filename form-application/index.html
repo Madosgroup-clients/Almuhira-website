@@ -66,9 +66,22 @@
                     Step <span style="color: var(--backGroundColor);"></span>
                 </p>
                 <div class="fieldset_section">
-                    <fieldset form="applicationForm">
+                    <fieldset class="applicationForm">
                         <legend>Section C: Education</legend>
                         <p>Please provide your educational background informations</p>
+                        <select name="Education background" id="education" aria-multiselectable="true">
+                            <option value="Hscd">High School or GED </option>
+                            <option value="ptc"> Professional/Technical Certificate </option>
+                            <option value="cd"> College diploma </option>
+                            <option value="bd">Bachelor's degree</option>
+                            <option value="psc">Post secondary certificate</option>
+                            <option value="jtc">Journeyman Trades Certificate</option>
+                            <option value="other">Other (please specify)</option>
+                        </select>
+                    </fieldset>
+                    <fieldset form="applicationForm">
+                        <!-- <legend>Section C: Education</legend>
+                        <p>Please provide your educational background informations</p> -->
                         <div class="input_wrapper centered">
                             <div class="input_container ">
                                 <div class="single_input ">
