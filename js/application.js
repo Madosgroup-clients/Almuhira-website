@@ -29,7 +29,7 @@ stepButton[0].lastElementChild.addEventListener("click", (event) => {
     event.stopPropagation();
     event.preventDefault();
     CurrentStep !== MAX_STEP ? NextStep() 
-    : console.log("you're on the submit button");
+    : console.log("you're on the submit button");qq
 })
 stepButton[0].firstElementChild.addEventListener("click", (event) => {
     event.stopPropagation();
